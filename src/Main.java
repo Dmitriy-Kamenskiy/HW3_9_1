@@ -14,6 +14,7 @@ public class Main {
 
         for (int i = 0; i < text.length(); i++) {
             char s = text.charAt(i);
+            if (!Character.isLetter(s)) continue;
             if (symbols.containsKey(s)){
                 int val = symbols.get(s) + 1;
                 symbols.put(s, val);
